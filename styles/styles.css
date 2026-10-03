@@ -1,0 +1,45 @@
+*, *::before, *::after {
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+}
+
+body {
+    background-color: rgba(136, 220, 248, 0.457); 
+    font-family: Arial, Helvetica, sans-serif
+}
+
+main {
+    margin: 30px auto; 
+    max-width: 80%;
+    padding: 1rem 1rem; 
+    background-color: #ffffff; 
+    box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.1); 
+    border-radius: 0.5rem; 
+}
+
+main h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+main .order-form {
+    padding: .75rem 1rem;
+    border-radius: 1rem; 
+    border: 1px solid grey; 
+}
+
+main .order-form legend {
+    color: rgba(0, 128, 0, 0.8);
+    font-weight: bold; 
+    text-align: center; 
+    padding: 0 .75rem;
+}
+
+input[type="text"], input[type="email"] {
+    width: 100%; 
+    padding: 8px; 
+    border-radius: .25rem;
+    margin: .25rem auto 1.5rem;
+    border: 1px solid grey; 
+}
