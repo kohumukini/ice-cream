@@ -12,7 +12,7 @@
     <main>
         <h1>Ice Cream Order Form</h1>
 
-        <form>
+        <form action="#" method="get">
             <fieldset class="order-form">
                 <legend>Personal Information</legend>
                 
@@ -32,40 +32,47 @@
                     <option value="Rocky Road">Rocky Road</option>
                 </select>
 
-                <label for="waffle-cone">
-                    <input type="radio" id="waffle-cone" name="cone" />
-                    Waffle Cone
-                </label>
-                <label for="sugar-cone">
-                    <input type="radio" id="sugar-cone" name="cone" />
-                    Sugar Cone
-                </label>
-                <label for="cup">
-                    <input type="radio" id="cup" name="cone" />
-                    Cup
-                </label>
+                <section id="cone-section">
+                    <p>Choose your cone:</p>
+                    <label for="waffle-cone">
+                        <input type="radio" id="waffle-cone" name="cone" />
+                        Waffle Cone
+                    </label>
+                    <label for="sugar-cone">
+                        <input type="radio" id="sugar-cone" name="cone" />
+                        Sugar Cone
+                    </label>
+                    <label for="cup">
+                        <input type="radio" id="cup" name="cone" />
+                        Cup
+                    </label>
+                </section>
 
-                <p>Toppings:</p>
-                <label for="sprinkles">
-                    <input type="checkbox" id="sprinkles" name="sprinkles" />
-                    Sprinkles
-                </label>
-                <label for="nuts">
-                    <input type="checkbox" id="nuts" name="nuts" />
-                    Nuts
-                </label>
-                <label for="cherry">
-                    <input type="checkbox" id="cherry" name="cherry" />
-                    Cherry
-                </label>
-                <label for="whipped-cream">
-                    <input type="checkbox" id="whipped-cream" name="whipped-cream" />
-                    Whipped Cream
-                </label>
+                <section id="toppings-section">
+                    <p>Toppings:</p>
+                    <label for="sprinkles">
+                        <input type="checkbox" id="sprinkles" name="sprinkles" />
+                        Sprinkles
+                    </label>
+                    <label for="nuts">
+                        <input type="checkbox" id="nuts" name="nuts" />
+                        Nuts
+                    </label>
+                    <label for="cherry">
+                        <input type="checkbox" id="cherry" name="cherry" />
+                        Cherry
+                    </label>
+                    <label for="whipped-cream">
+                        <input type="checkbox" id="whipped-cream" name="whipped-cream" />
+                        Whipped Cream
+                    </label>
+                </section>
 
                 <label for="comments">Additional Comments</label>
                 <input type="text" id="comments" name="comments" />
             </fieldset>
+
+            <button type="submit">Submit Order</button>
         </form>
     </main>
 </body>
