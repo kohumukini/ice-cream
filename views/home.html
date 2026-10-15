@@ -7,25 +7,33 @@
 
     <link rel="Stylesheet" href="./styles/styles.css" />
     <link rel="icon" type="image/png" href="./images/ice_cream.png" />
+    <script src="js/ice-cream.js" defer></script>
 </head>
 <body>
     <main>
         <h1>Ice Cream Order Form</h1>
 
-        <form action="#" method="get">
+        <form id="ice-cream-form" action="#" method="get">
             <fieldset class="order-form">
                 <legend>Personal Information</legend>
                 
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" placeholder="John Doe" />
+                <span class="err" id="name-err">Please enter a name</span>
+
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" placeholder="john.doe@mail.com" />
+                <span class="err" id="email-err">Please enter an email</span>
+
             </fieldset>
             <fieldset class="order-form">
                 <legend>Order Details</legend>
+
+                <span class="err" id="flavor-err">Please select a flavor</span>
                 
                 <label for="flavors">Choose your flavor:</label>
                 <select name="flavors" id="flavors">
+                    <option value="none">-- select a flavor --</option>
                     <option value="Vanilla">Vanilla</option>
                     <option value="Chocolate">Chocolate</option>
                     <option value="Strawberry">Strawberry</option>
@@ -33,6 +41,8 @@
                 </select>
 
                 <section id="cone-section">
+                    <span class="err" id="cone-err">Please choose a cone</span>
+
                     <p>Choose your cone:</p>
                     <label for="waffle-cone">
                         <input type="radio" id="waffle-cone" name="cone" />
