@@ -24,7 +24,7 @@ document.getElementById("ice-cream-form").onsubmit = () => {
         valid = false; 
     }
 
-    let cone = document.getElementsByClassName("cone");
+    let cone = document.getElementsByName("cone");
 
     for (let i = 0; i < cone.length; i++) {
         if (cone[i].checked) {
