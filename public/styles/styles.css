@@ -52,6 +52,7 @@ select {
 
 #cone-section, #toppings-section {
     margin: 0 0 1rem; 
+    border: none;
 }
 
 #cone-section label, #toppings-section label {

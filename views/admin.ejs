@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders</title>
+
+    <!-- Data Table Resources -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdn.datatables.net/3.1.4/js/dataTables.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/3.1.4/css/dataTables.dataTables.min.css">
+</head>
+<body>
+    <h1>Orders</h1>
+
+    <table id="order-table" class="display">
+        <thead>
+            <tr>
+                <th>Time</th>
+                <th>Customer</th>
+                <th>Email</th>
+                <th>Flavor</th>
+                <th>Cone</th>
+                <th>Toppings</th>
+            </tr>
+        </thead>
+        <% orders.forEach(order => { %>
+            <tr>
+                <td><%= order.timestamp.toLocaleString()%></td>
+                <td><%= order.name%></td>
+                <td><%= order.email%></td>
+                <td><%= order.flavors%></td>
+                <td><%= order.cone%></td>
+                <td><%= order.toppings%></td>
+            </tr>
+        <% }); %>
+    </table>
+
+    <script>
+        new DataTable('#order-table');
+    </script>
+</body>
+</html>

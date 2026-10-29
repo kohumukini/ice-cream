@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+    
+    <link rel="icon" type="image/png" href="./images/ice_cream.png" />
+    <link rel="stylesheet" href="./styles/styles.css" >
+</head>
+<body>
+    <main>
+        <section class="hero">
+            <img src="./images/checkmark.png">
+            <h1>Thank You For Your Order!</h1>
+            <p>Your ice cream order has been confirmed</p>
+        </section>
+        <section>
+            <div id="info">
+                <div id="name">
+                    <p>Name: </p>
+                    <p><%= order.name%><p>
+                </div>
+                <div id="name">
+                    <p>Email: </p>
+                    <p><%= order.email%></p>
+                </div>
+            </div>
+            <div id="order-details">
+                <div id="name">
+                    <p>Flavor: </p>
+                    <p><%= order.flavors%></p>
+                </div>
+                <div id="name">
+                    <p>Cone Type: </p>
+                    <p><%= order.cone%></p>
+                </div>
+                <div id="name">
+                    <p>Toppings: </p>
+                    <p><%= order.toppings%></p>
+                </div>
+            </div>
+            <div id="comments">
+                <p><% order.comments %></p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

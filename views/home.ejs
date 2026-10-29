@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ice Cream</title>
 
-    <link rel="Stylesheet" href="./styles/styles.css" />
+    <link rel="stylesheet" href="./styles/styles.css" />
     <link rel="icon" type="image/png" href="./images/ice_cream.png" />
     <script src="js/ice-cream.js" defer></script>
 </head>
@@ -13,7 +13,7 @@
     <main>
         <h1>Ice Cream Order Form</h1>
 
-        <form id="ice-cream-form" action="#" method="get">
+        <form id="ice-cream-form" action="/submit-order" method="post">
             <fieldset class="order-form">
                 <legend>Personal Information</legend>
                 
@@ -40,43 +40,43 @@
                     <option value="Rocky Road">Rocky Road</option>
                 </select>
 
-                <section id="cone-section">
+                <fieldset id="cone-section">
                     <span class="err" id="cone-err">Please choose a cone</span>
 
                     <p>Choose your cone:</p>
                     <label for="waffle-cone">
-                        <input type="radio" id="waffle-cone" name="cone" />
+                        <input type="radio" id="waffle-cone" name="cone" value="Waffle Cone"/>
                         Waffle Cone
                     </label>
                     <label for="sugar-cone">
-                        <input type="radio" id="sugar-cone" name="cone" />
+                        <input type="radio" id="sugar-cone" name="cone" value="Sugar Cone"/>
                         Sugar Cone
                     </label>
                     <label for="cup">
-                        <input type="radio" id="cup" name="cone" />
+                        <input type="radio" id="cup" name="cone" value="Cup"/>
                         Cup
                     </label>
-                </section>
+                </fieldset>
 
-                <section id="toppings-section">
+                <fieldset id="toppings-section">
                     <p>Toppings:</p>
                     <label for="sprinkles">
-                        <input type="checkbox" id="sprinkles" name="sprinkles" />
+                        <input type="checkbox" id="sprinkles" name="toppings[]" value="Sprinkles"/>
                         Sprinkles
                     </label>
                     <label for="nuts">
-                        <input type="checkbox" id="nuts" name="nuts" />
+                        <input type="checkbox" id="nuts" name="toppings[]" value="Nuts"/>
                         Nuts
                     </label>
                     <label for="cherry">
-                        <input type="checkbox" id="cherry" name="cherry" />
+                        <input type="checkbox" id="cherry" name="toppings[]" value="Cherry"/>
                         Cherry
                     </label>
                     <label for="whipped-cream">
-                        <input type="checkbox" id="whipped-cream" name="whipped-cream" />
+                        <input type="checkbox" id="whipped-cream" name="toppings[]" value="Whipped Cream"/>
                         Whipped Cream
                     </label>
-                </section>
+                </fieldset>
 
                 <label for="comments" id="comments-label">Additional Comments
                     <textarea id="comments" ></textarea>
