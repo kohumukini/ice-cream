@@ -5,7 +5,7 @@ document.getElementById("ice-cream-form").onsubmit = () => {
 
     let name = document.getElementById("name").value.trim();
     let email = document.getElementById("email").value.trim(); 
-    let flavor = document.getElementById("flavors").value.trim(); 
+    let flavor = document.getElementById("flavor").value.trim(); 
 
     let coneSelected = false; 
     

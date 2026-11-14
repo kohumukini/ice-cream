@@ -26,35 +26,8 @@ app.get('/', (req, res) => {
     res.render('home')
 })
 
-app.get('/confirm-order', async (req, res) => {
-    try {
-        const order = req.body; 
-        console.log('New order submitted:', order); 
-
-        order.toppings = Array.isArray(order.toppings) ?
-            order.toppings.join(", ") : ""; 
-
-        const sql = 'INSERT INTO orders(customer, email, flavor, cone, toppings, comment) VALUES (?, ?, ?, ?, ?, ?)';
-
-        const params = [
-            order.customer, 
-            order.email, 
-            order.flavor, 
-            order.cone, 
-            order.toppings, 
-            order.comment
-        ];
-
-        const[result] = await pool.query(sql, params);
-        
-        order.id = result.insertId;
-        console.log('Order saved with ID: ' + order.id); 
-
-        res.render('confirm', { order }); 
-    } catch (err) {
-        console.error('Error saving order:', err);
-        res.status(500).send(`Sorry, there was an error processing your order. Please try again.`)
-    }
+app.get('/confirm-order', (req, res) => {
+    res.render("confirm")
 })
 
 app.get('/admin', async (req, res) => {
@@ -77,14 +50,35 @@ app.get('/db-test', async (req, res) => {
     }
 })  
 
-app.post('/submit-order', (req, res) => {
-    const order = req.body;
-    order['timestamp'] = new Date(); 
+app.post('/submit-order', async (req, res) => {
+    try {
+        const order = req.body; 
+        console.log('New order submitted:', order); 
 
-    console.log(order);
+        order.toppings = Array.isArray(order.toppings) ?
+            order.toppings.join(", ") : ""; 
 
-    orders.push(order);
-    res.render('confirm', { order });
+        const sql = 'INSERT INTO orders(customer, email, flavor, cone, toppings, comment) VALUES (?, ?, ?, ?, ?, ?)';
+
+        const params = [
+            order.name, 
+            order.email, 
+            order.flavor, 
+            order.cone, 
+            order.toppings, 
+            order.comment
+        ];
+
+        const[result] = await pool.query(sql, params);
+        
+        order.id = result.insertId;
+        console.log('Order saved with ID: ' + order.id); 
+
+        res.render('confirm', { order }); 
+    } catch (err) {
+        console.error('Error saving order:', err);
+        res.status(500).send(`Sorry, there was an error processing your order. Please try again.`)
+    }
 })
 
 app.listen(PORT, () => {

@@ -17,31 +17,32 @@
         </section>
         <section>
             <div id="info">
-                <div id="name">
+                <div id="info-name">
                     <p>Name: </p>
-                    <p><%= order.name%><p>
+                    <p><%= order.name%></p>
                 </div>
-                <div id="name">
+                <div id="info-email">
                     <p>Email: </p>
                     <p><%= order.email%></p>
                 </div>
             </div>
             <div id="order-details">
-                <div id="name">
+                <div id="info-flavor">
                     <p>Flavor: </p>
-                    <p><%= order.flavors%></p>
+                    <p><%= order.flavor%></p>
                 </div>
-                <div id="name">
+                <div id="info-cone">
                     <p>Cone Type: </p>
                     <p><%= order.cone%></p>
                 </div>
-                <div id="name">
+                <div id="info-toppings">
                     <p>Toppings: </p>
                     <p><%= order.toppings%></p>
                 </div>
-            </div>
-            <div id="comments">
-                <p><% order.comments %></p>
+                <div id="info-comment">
+                    <p>Comment:</p>
+                    <p><%= order.comment %></p>
+                </div>
             </div>
         </section>
     </main>

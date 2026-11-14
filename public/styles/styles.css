@@ -37,7 +37,7 @@ main .order-form legend {
     padding: 0 .75rem;
 }
 
-input[type="text"], input[type="email"], select {
+input[type="text"], input[type="email"], select, textarea {
     width: 100%; 
     padding: 8px; 
     border-radius: .25rem;

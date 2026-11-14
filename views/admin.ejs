@@ -23,16 +23,18 @@
                 <th>Flavor</th>
                 <th>Cone</th>
                 <th>Toppings</th>
+                <th>Comment</th>
             </tr>
         </thead>
         <% orders.forEach(order => { %>
             <tr>
                 <td><%= order.timestamp.toLocaleString()%></td>
-                <td><%= order.name%></td>
+                <td><%= order.customer %></td>
                 <td><%= order.email%></td>
-                <td><%= order.flavors%></td>
+                <td><%= order.flavor%></td>
                 <td><%= order.cone%></td>
                 <td><%= order.toppings%></td>
+                <td><%= order.comment %></td>
             </tr>
         <% }); %>
     </table>
