@@ -45,7 +45,9 @@ app.get('/confirm-order', async (req, res) => {
             order.comment
         ];
 
-        const[result] = result.insertId; 
+        const[result] = await pool.query(sql, params);
+        
+        order.id = result.insertId;
         console.log('Order saved with ID: ' + order.id); 
 
         res.render('confirm', { order }); 
